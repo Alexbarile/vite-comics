@@ -7,8 +7,8 @@ export default {
 <template lang="">
     <main>
         <div class="container">
-            <div class="row-main">
-                <div class="col-main">
+            <div class="row">
+                <div class="col">
                     <span>Content goes here</span>
                 </div>
             </div>

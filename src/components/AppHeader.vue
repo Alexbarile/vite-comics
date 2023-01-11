@@ -62,15 +62,15 @@ export default {
 
 <template>
     <header class="container">
-        <div class="row-header">
+        <div class="row">
 
-            <div class="col-header">
+            <div class="col">
                 <a href="#" class="logo">
                     <img src="../../public/img/dc-logo.png" alt="logo">
                 </a>
             </div>
 
-            <div class="col-header">
+            <div class="col">
                 <ul>
                     <li v-for="(item, index) in menu" :key="index">
                         <a href="item.url" class="item.active ? 'active' : ''">
@@ -87,27 +87,32 @@ export default {
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
 
-    .row-header{
-        @include space_between;
-        margin-top: 20px 
-    }
-    .col-header{
-        @include space_between;
-    }
-    ul{
-        @include center;
-        list-style-type: none;
-        li{
-            padding: 10px;
-            @include upbold;
-            a{
-                text-decoration: none;
-                color: black;
+    header{
 
-                &.active, &:hover{
-                    color: $blu;
-                    border-bottom: 5px solid $blu;
-                    padding-bottom: 40px;
+        .row{
+            @include space_between;
+            margin-top: 20px 
+        }
+
+        .col{
+            @include space_between;
+        }
+
+        ul{
+            @include center;
+            list-style-type: none;
+            li{
+                padding: 10px;
+                @include upbold;
+                a{
+                    text-decoration: none;
+                    color: black;
+    
+                    &.active, &:hover{
+                        color: $blu;
+                        border-bottom: 5px solid $blu;
+                        padding-bottom: 40px;
+                    }
                 }
             }
         }

@@ -61,8 +61,8 @@ export default {
     <footer>
         <div class="bg-blu">
             <div class="container">
-               <div class="row-footer">
-                    <div class="col-footer">
+               <div class="row">
+                    <div class="col">
                         <ul>
                             <li v-for="(i, index) in icon" :key="i">
                                 <a href="#">
@@ -94,10 +94,26 @@ export default {
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
     
-    .bg-blu{
-        background-color: $blu;
-        height: 150px;
-    }
+        .bg-blu{
+            background-color: $blu;
+            height: 150px;
+
+            .col{
+                
+                ul{
+                    @include space_between;
+                }
+                li{
+                    @include space_between;
+                }
+    
+                a{
+                    color: $white;
+                    font-weight: 300;
+                }
+            }
+
+        }
 
 </style>
 
