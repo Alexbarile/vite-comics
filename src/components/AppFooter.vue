@@ -66,7 +66,9 @@ export default {
                         <ul>
                             <li v-for="(i, index) in icon" :key="i">
                                 <a href="#">
+                                    
                                     <img :src="getImagePath(i.label)" alt="logo">
+                                    
                                     <span>{{i.description}}</span>
                                 </a>
                             </li>
@@ -96,20 +98,27 @@ export default {
     
         .bg-blu{
             background-color: $blu;
-            height: 150px;
-
-            .col{
+           
+            .row{
                 
                 ul{
                     @include space_between;
                 }
                 li{
                     @include space_between;
+                    padding: 30px;
                 }
     
                 a{
                     color: $white;
                     font-weight: 300;
+                    text-decoration: none;
+                    @include center;
+                    
+                   img{
+                    width: 60px;
+                    padding: 10px;
+                   }
                 }
             }
 
