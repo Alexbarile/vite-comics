@@ -62,15 +62,15 @@ export default {
 
 <template>
     <header class="container">
-        <div class="row">
+        <div class="row-header">
 
-            <div class="col">
+            <div class="col-header">
                 <a href="#" class="logo">
                     <img src="../../public/img/dc-logo.png" alt="logo">
                 </a>
             </div>
 
-            <div class="col">
+            <div class="col-header">
                 <ul>
                     <li v-for="(item, index) in menu" :key="index">
                         <a href="item.url" class="item.active ? 'active' : ''">
@@ -87,11 +87,11 @@ export default {
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
 
-    .row{
+    .row-header{
         @include space_between;
         margin-top: 20px 
     }
-    .col{
+    .col-header{
         @include space_between;
     }
     ul{

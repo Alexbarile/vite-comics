@@ -6,10 +6,27 @@ export default {
 
 <template lang="">
     <main>
-        
+        <div class="container">
+            <div class="row-main">
+                <div class="col-main">
+                    <span>Content goes here</span>
+                </div>
+            </div>
+        </div>
     </main>
 </template>
 
 <style lang="scss">
+@use '../styles/partials/mixins' as *;
+@use '../styles/partials/variables' as *;
     
+    main{
+        background-color: $black;
+        height: 150px;
+        @include space_between;
+        
+        span{
+            color: white;
+        }
+    }
 </style>
