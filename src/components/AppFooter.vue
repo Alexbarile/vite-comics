@@ -149,9 +149,28 @@ export default {
 
         <div class="social">
             <div class="container">
-               
-            </div>
+                <div class="row">
 
+                    <!-- button -->
+
+                    <div class="col">
+                        <button><a href="#"> Sign-Up Now!</a></button>
+                    </div>
+
+                    <!-- loghi social -->
+
+                    <div class="col">
+                        <ul>
+                            <h3>Follow Us</h3>
+                            <ul>
+                                <li v-for="(item, index) in social" :key="index">
+                                    <a href="#"><img :src="getImagePath(item.logo)" alt="loghi-social"></a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 </template>
@@ -164,24 +183,29 @@ export default {
 
         .bg-blu{
             background-color: $blu;
-           
+
             .row{
+
                 ul{
                     @include space_between;
                 }
+
                 li{
                     @include space_between;
                     padding: 35px;
                 }
+
                 a{
                     color: $white;
                     font-weight: 300;
                     text-decoration: none;
                     @include center;
+
                    img{
                     width: 60px;
                     padding: 10px;
                    }
+
                    span{
                     font-size: 15px;
                    }
@@ -194,35 +218,91 @@ export default {
         .jumbo{
             background-image: url('../../public/img/footer-bg.jpg');
             background-size: cover;
+
             .row{
                 @include space_between;
             }
+
             .col{
                 display: flex;
+
                 div{
                     margin-right: 30px;
                 }
             }
+
             h3{
                 @include upbold;
                 font-size: 20px;
                 color: $white;
                 padding-top: 10px;
             }
+
             ul{
                 list-style-type: none;
                 margin-top: 10px;
+
                 a{
                     color: $gray;
                     text-decoration: none;
                     font-size: 13px;
+
+                    &:hover{
+                        color: $white;
+                    }
                 }
             }
         }
 
 // terza parte footer
-          
 
+        .social{
+            background-color: rgb(52, 52, 52);
+            height: 100px;
 
+            .container{
+                height: 100%;
+            }
+
+            .row{
+                @include space_between;
+                height: 100%;
+            }
+
+            button{
+                
+                font-size: 20px;
+                border: 2px solid $blu;
+                padding: 20px;
+                background-color: rgb(52, 52, 52);
+                @include upbold;
+
+                a{
+                    color: $white;
+                    text-decoration: none;
+                }
+
+                &:hover{
+                        font-size: 22px;
+                        transition: 0.3s;
+                }
+            }
+
+            ul{
+                display: flex;
+                align-items: center;
+
+                h3{
+                    @include upbold;
+                    color: $blu;
+                    padding: 10px;
+                }
+
+                li{
+                    list-style-type: none;
+                    padding: 10px;
+                }
+            }
+        }
 </style>
 
