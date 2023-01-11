@@ -105,8 +105,8 @@ export default {
                 color: black;
 
                 &.active, &:hover{
-                    color: $primary;
-                    border-bottom: 5px solid $primary;
+                    color: $blu;
+                    border-bottom: 5px solid $blu;
                     padding-bottom: 40px;
                 }
             }

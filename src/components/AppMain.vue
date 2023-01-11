@@ -22,7 +22,7 @@ export default {
     
     main{
         background-color: $black;
-        height: 150px;
+        height: 100px;
         @include space_between;
         
         span{
