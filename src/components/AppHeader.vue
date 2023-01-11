@@ -64,11 +64,15 @@ export default {
     <header class="container">
         <div class="row">
 
+            <!-- logo -->
+
             <div class="col">
                 <a href="#" class="logo">
                     <img src="../../public/img/dc-logo.png" alt="logo">
                 </a>
             </div>
+
+            <!-- navbar -->
 
             <div class="col">
                 <ul>

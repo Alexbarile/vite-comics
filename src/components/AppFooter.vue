@@ -48,6 +48,9 @@ export default {
             ]
         }
     },
+
+    // funzione per mostrare le icone nelle prima parte del footer
+
     methods: {
         getImagePath: function (img) {
             return `/img/${img}`
@@ -59,6 +62,9 @@ export default {
 
 <template lang="">
     <footer>
+
+        <!-- prima parte footer -->
+
         <div class="bg-blu">
             <div class="container">
                <div class="row">
@@ -66,9 +72,7 @@ export default {
                         <ul>
                             <li v-for="(i, index) in icon" :key="i">
                                 <a href="#">
-                                    
                                     <img :src="getImagePath(i.label)" alt="logo">
-                                    
                                     <span>{{i.description}}</span>
                                 </a>
                             </li>
@@ -77,12 +81,72 @@ export default {
                </div>
             </div>
         </div>
+
+        <!-- seconda parte footer -->
+
         <div class="jumbo">
             <div class="container">
-               
-            </div>
+                <div class="row">
 
+                    <!-- link -->
+
+                    <div class="col">
+                        <div>
+                            <h3>Dc comics</h3>
+                            <ul>
+                                <li><a href="#">Characters</a></li>
+                                <li><a href="#">Comics</a></li>
+                                <li><a href="#">Movies</a></li>
+                                <li><a href="#">TV</a></li>
+                                <li><a href="#">Games</a></li>
+                                <li><a href="#">Videos</a></li>
+                                <li><a href="#">News</a></li>
+                            </ul>
+                            <h3>Shop</h3>
+                            <ul>
+                                <li><a href="#">Shop DC</a></li>
+                                <li><a href="#">Shop DC Collectibles</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Dc</h3>
+                            <ul>
+                                <li><a href="#">Temos Of Use</a></li>
+                                <li><a href="#">Privacy policy (New)</a></li>
+                                <li><a href="#">Ad Choices</a></li>
+                                <li><a href="#">Advertising</a></li>
+                                <li><a href="#">Jobs</a></li>
+                                <li><a href="#">Subscriptions</a></li>
+                                <li><a href="#">Talent Workshops</a></li>
+                                <li><a href="#">CPSC Cerrificates</a></li>
+                                <li><a href="#">Ratings</a></li>
+                                <li><a href="#">Shop Help</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Sites</h3>
+                            <ul>
+                                <li><a href="#">DC</a></li>
+                                <li><a href="#">MAD Magazine</a></li>
+                                <li><a href="#">DC Kids</a></li>
+                                <li><a href="#">DC Universe</a></li>
+                                <li><a href="#">DC Power Visa</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- logo grande -->
+
+                    <div class="col">
+                        <img src="/img/dc-logo-bg.png" alt="dc-logo">
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- terza parte footer -->
+
         <div class="social">
             <div class="container">
                
@@ -95,34 +159,70 @@ export default {
 <style lang="scss">
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
-    
+
+// prima parte footer
+
         .bg-blu{
             background-color: $blu;
            
             .row{
-                
                 ul{
                     @include space_between;
                 }
                 li{
                     @include space_between;
-                    padding: 30px;
+                    padding: 35px;
                 }
-    
                 a{
                     color: $white;
                     font-weight: 300;
                     text-decoration: none;
                     @include center;
-                    
                    img{
                     width: 60px;
                     padding: 10px;
                    }
+                   span{
+                    font-size: 15px;
+                   }
                 }
             }
-
         }
+
+// seconda parte footer
+
+        .jumbo{
+            background-image: url('../../public/img/footer-bg.jpg');
+            background-size: cover;
+            .row{
+                @include space_between;
+            }
+            .col{
+                display: flex;
+                div{
+                    margin-right: 30px;
+                }
+            }
+            h3{
+                @include upbold;
+                font-size: 20px;
+                color: $white;
+                padding-top: 10px;
+            }
+            ul{
+                list-style-type: none;
+                margin-top: 10px;
+                a{
+                    color: $gray;
+                    text-decoration: none;
+                    font-size: 13px;
+                }
+            }
+        }
+
+// terza parte footer
+          
+
 
 </style>
 
