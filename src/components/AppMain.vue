@@ -83,7 +83,6 @@ export default {
             ]
         };
     },
-    
 }
 </script>
 
@@ -109,10 +108,8 @@ export default {
                         <button><a href="#">Load More</a></button>
                     </div>
                 </div>
-                
             </div>
         </div>
-
     </main>
 </template>
 
@@ -127,7 +124,6 @@ export default {
             background-image: url('../../public/img/jumbotron.jpg');
             background-size: cover;
         }
-
         .bg-black{
             background-color: rgb(31, 31, 31);
 
@@ -137,7 +133,9 @@ export default {
                     .col{
                         width: 100%;
                         display: flex;
+                        align-items: baseline;
                         flex-wrap: wrap;
+                        padding-top: 30px
                     }
                 }
             }

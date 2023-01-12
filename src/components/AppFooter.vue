@@ -140,7 +140,7 @@ export default {
                     <!-- logo grande -->
 
                     <div class="col">
-                        <img src="/img/dc-logo-bg.png" alt="dc-logo">
+                        <!-- img messa in bg-imgae -->
                     </div>
                 </div>
             </div>
@@ -184,7 +184,6 @@ export default {
 
         .bg-blu{
             background-color: $blu;
-
             .row{
 
                 ul{
@@ -222,6 +221,9 @@ export default {
             // non uscirà nulla perchè serve il contenuto
 
             .row{
+                background-image: url('../../public/img/dc-logo-bg.png');
+                background-position: right center;
+                background-repeat: no-repeat;
                 @include space_between;
             }
 
@@ -265,7 +267,6 @@ export default {
             .container{
                 height: 100%;
             }
-
             .row{
                 @include space_between;
                 height: 100%;

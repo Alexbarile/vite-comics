@@ -56,7 +56,6 @@ export default {
             ]
         }
     },
-    
 }
 </script>
 
@@ -98,7 +97,6 @@ export default {
             margin-top: 20px;
             width: 100%;
         }
-
         .col{
             @include space_between;
         }

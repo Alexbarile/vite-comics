@@ -8,10 +8,10 @@ export default {
 
 <template>
     <div class="album-card">
-            <div class="card">
-                <img :src="card.thumb" :alt="card.series">
-            </div>
-            <h3>{{ card.series }}</h3>  
+        <div class="card">
+            <img :src="card.thumb" :alt="card.series">
+        </div>
+        <h3>{{ card.series }}</h3>  
     </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
 
     .album-card{
         width: calc(100% / 6); 
-        padding: 10px 20px;
+        padding: 10px 10px;
 
         h3{
             color: $white;
@@ -29,7 +29,10 @@ export default {
             @include upbold;
         }
         .card{
-            width: 100%
+            img{
+                width: 100%;
+            }
+            
         }
     }
 </style>
