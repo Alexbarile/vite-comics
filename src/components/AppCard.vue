@@ -20,7 +20,8 @@ export default {
 @use '../styles/partials/variables' as *;
 
     .album-card{
-        width: 100%;
+        width: calc(100% / 6); 
+        padding: 10px 20px;
 
         h3{
             color: $white;
@@ -28,7 +29,7 @@ export default {
             @include upbold;
         }
         .card{
-            width: calc(100% / 6); 
+            width: 100%
         }
     }
 </style>
