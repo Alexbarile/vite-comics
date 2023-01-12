@@ -73,6 +73,7 @@ export default {
                             <li v-for="(i, index) in icon" :key="i">
                                 <a href="#">
                                     <img :src="getImagePath(i.label)" alt="logo">
+                                    <!-- <img :src="`/img/${i.label}`" alt="logo"></img> -->
                                     <span>{{i.description}}</span>
                                 </a>
                             </li>
@@ -175,7 +176,7 @@ export default {
     </footer>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
 
@@ -192,7 +193,7 @@ export default {
 
                 li{
                     @include space_between;
-                    padding: 35px;
+                    padding: 20px;
                 }
 
                 a{
@@ -207,7 +208,7 @@ export default {
                    }
 
                    span{
-                    font-size: 15px;
+                    font-size: 12px;
                    }
                 }
             }
@@ -218,6 +219,7 @@ export default {
         .jumbo{
             background-image: url('../../public/img/footer-bg.jpg');
             background-size: cover;
+            // non uscirà nulla perchè serve il contenuto
 
             .row{
                 @include space_between;

@@ -16,7 +16,7 @@ export default {
     </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
     

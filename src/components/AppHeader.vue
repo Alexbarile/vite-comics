@@ -74,20 +74,20 @@ export default {
 
             <!-- navbar -->
 
-            <div class="col">
+            <nav class="col">
                 <ul>
                     <li v-for="(item, index) in menu" :key="index">
-                        <a href="item.url" class="item.active ? 'active' : ''">
+                        <a :href="item.url" class="item.active ? 'active' : ''">
                             {{ item.label }}
                         </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
 
@@ -95,7 +95,8 @@ export default {
 
         .row{
             @include space_between;
-            margin-top: 20px 
+            margin-top: 20px;
+            width: 100%;
         }
 
         .col{
@@ -111,6 +112,7 @@ export default {
                 a{
                     text-decoration: none;
                     color: black;
+                    font-size: 13px;
     
                     &.active, &:hover{
                         color: $blu;
