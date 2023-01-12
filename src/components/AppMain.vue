@@ -1,8 +1,8 @@
 <script>
 import AppCard from './AppCard.vue';
-import AppCard from './AppCard.vue';
+
 export default {
-    component: {
+    components: {
         AppCard,
     },
     data() {
@@ -83,7 +83,7 @@ export default {
             ]
         };
     },
-    components: { AppCard }
+    
 }
 </script>
 
@@ -106,7 +106,7 @@ export default {
                 </div>
                 <div class="row">
                     <div class="col">
-                        <button></button>
+                        <button><a href="#">Load More</a></button>
                     </div>
                 </div>
                 
@@ -121,17 +121,43 @@ export default {
 @use '../styles/partials/variables' as *;
     
     main{
-        
         .jumbo{
+            height: 350px;
+            width: 100%;
             background-image: url('../../public/img/jumbotron.jpg');
             background-size: cover;
         }
 
         .bg-black{
             background-color: rgb(31, 31, 31);
-            height: 200px;
+
+            .container{
+                .row{
+                    width: 100%;
+                    .col{
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+            .col{
+                @include center;
+
+                button{
+                    padding: 7px 40px;
+                    background-color: $blu;
+                    border: none;
+                    margin-bottom: 20px;
+    
+                    a{
+                        text-decoration: none;
+                        @include upbold;
+                        color: $white;
+                        font-size: 13px;
+                    }
+                }
+            } 
         }
-    
-    
     }
 </style>
