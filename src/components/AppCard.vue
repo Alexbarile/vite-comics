@@ -8,8 +8,11 @@ export default {
 </script>
 
 <template>
-    <div>
-        
+    <div class="album-card">
+        <div class="card">
+            <img :src="card.thumb" :alt="card.series">
+        </div>
+        <h3>{{ card.series }}</h3>  
     </div>
 </template>
 

@@ -104,6 +104,12 @@ export default {
                         <AppCard v-for="(item, index) in Cards" :key="index" :card="item"></AppCard> 
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col">
+                        <button></button>
+                    </div>
+                </div>
+                
             </div>
         </div>
 
@@ -117,7 +123,6 @@ export default {
     main{
         
         .jumbo{
-            height: 300px;
             background-image: url('../../public/img/jumbotron.jpg');
             background-size: cover;
         }
