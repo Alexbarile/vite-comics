@@ -1,5 +1,6 @@
 <script>
 import AppCard from './AppCard.vue';
+import AppCard from './AppCard.vue';
 export default {
     component: {
         AppCard,
@@ -80,9 +81,9 @@ export default {
                     "type": "graphic novel"
                 }
             ]
-        }
+        };
     },
-    
+    components: { AppCard }
 }
 </script>
 
@@ -91,13 +92,7 @@ export default {
         
         <!-- jumbotron -->
 
-
-        <div class="row">
-            <div class="col">
-                <div class="jumbo">
-                    <img src="../../public/img/jumbotron.jpg" alt="jumbo">
-                </div>
-             </div>
+        <div class="jumbo">
         </div>
 
         <!-- serie tv -->
@@ -106,7 +101,7 @@ export default {
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <span>Content goes here</span>
+                        <AppCard v-for="(item, index) in Cards" :key="index" :card="item"></AppCard> 
                     </div>
                 </div>
             </div>
@@ -120,16 +115,16 @@ export default {
 @use '../styles/partials/variables' as *;
     
     main{
-        background-color: $black;
         
+        .jumbo{
+            height: 300px;
+            background-image: url('../../public/img/jumbotron.jpg');
+            background-size: cover;
+        }
 
-        .row{
-            width: 100%;
-            height: 100%;
-
-            .jumbo img{
-               width: 100%;
-            }
+        .bg-black{
+            background-color: rgb(31, 31, 31);
+            height: 200px;
         }
     
     

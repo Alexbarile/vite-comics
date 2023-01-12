@@ -1,7 +1,8 @@
 <script>
 export default {
     props: {
-        Card: Object,
+        name: 'AppCard',
+        card: Object,
     }
 }
 </script>
