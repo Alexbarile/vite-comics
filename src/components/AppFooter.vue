@@ -85,7 +85,7 @@ export default {
 
         <!-- seconda parte footer -->
 
-        <div class="jumbo">
+        <div class="jumbo-2">
             <div class="container">
                 <div class="row">
 
@@ -216,7 +216,7 @@ export default {
 
 // seconda parte footer
 
-        .jumbo{
+        .jumbo-2{
             background-image: url('../../public/img/footer-bg.jpg');
             background-size: cover;
             // non uscirà nulla perchè serve il contenuto

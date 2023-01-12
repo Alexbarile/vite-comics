@@ -88,13 +88,30 @@ export default {
 
 <template>
     <main>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <span>Content goes here</span>
+        
+        <!-- jumbotron -->
+
+
+        <div class="row">
+            <div class="col">
+                <div class="jumbo">
+                    <img src="../../public/img/jumbotron.jpg" alt="jumbo">
+                </div>
+             </div>
+        </div>
+
+        <!-- serie tv -->
+
+        <div class="bg-black">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <span>Content goes here</span>
+                    </div>
                 </div>
             </div>
         </div>
+
     </main>
 </template>
 
@@ -104,11 +121,17 @@ export default {
     
     main{
         background-color: $black;
-        height: 100px;
-        @include space_between;
         
-        span{
-            color: white;
+
+        .row{
+            width: 100%;
+            height: 100%;
+
+            .jumbo img{
+               width: 100%;
+            }
         }
+    
+    
     }
 </style>
