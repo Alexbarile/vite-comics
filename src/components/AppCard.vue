@@ -31,6 +31,13 @@ export default {
         .card{
             img{
                 width: 100%;
+                
+                // per tagliare l'immagine 
+                
+                // height: 200px;
+                // object-fit: cover;
+                // object-position: top;
+                
             }
             
         }
