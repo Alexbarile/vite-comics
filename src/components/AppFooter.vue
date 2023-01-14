@@ -279,6 +279,7 @@ export default {
                 padding: 20px;
                 background-color: rgb(52, 52, 52);
                 @include upbold;
+                transition: 1s;
 
                 a{
                     color: $white;
@@ -286,8 +287,7 @@ export default {
                 }
 
                 &:hover{
-                        font-size: 22px;
-                        transition: 0.3s;
+                       scale: 1.3;
                 }
             }
 
