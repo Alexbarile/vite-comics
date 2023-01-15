@@ -229,6 +229,7 @@ export default {
 
             .col{
                 display: flex;
+                padding: 20px;
 
                 div{
                     margin-right: 30px;
@@ -287,7 +288,7 @@ export default {
                 }
 
                 &:hover{
-                       scale: 1.3;
+                       scale: 1.2;
                 }
             }
 

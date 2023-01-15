@@ -99,6 +99,11 @@ export default {
         <div class="bg-black">
             <div class="container">
                 <div class="row">
+                    <div class="col-info">
+                        <h4>Current series</h4>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col">
                         <AppCard v-for="(item, index) in Cards" :key="index" :card="item"></AppCard> 
                     </div>
@@ -130,6 +135,22 @@ export default {
             .container{
                 .row{
                     width: 100%;
+
+                    .col-info{
+                        display: flex;
+                        justify-content: flex-start;
+                        position: relative;
+
+                        h4{
+                            font-size: 25px;
+                            padding: 7px 40px;
+                            background-color: $blu;
+                            position: absolute;
+                            top: -27px;
+                            @include upbold;
+                            color: $white;  
+                        }
+                    }
                     .col{
                         width: 100%;
                         display: flex;
@@ -147,6 +168,10 @@ export default {
                     background-color: $blu;
                     border: none;
                     margin-bottom: 20px;
+                    
+                    &:hover{
+                        box-shadow: 0 0 7px 5px rgba(255, 255, 255, 0.423);
+                    }
     
                     a{
                         text-decoration: none;
